@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>A Question for You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <header>
+    <a class="brand" href="#home">♡ Just For You</a>
+
+    <button id="musicButton" class="small-button" type="button">
+      ♫ Play Music
+    </button>
+
+    <audio id="music" loop>
+      <source src="audio/songs.mp3" type="audio/mpeg">
+    </audio>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+
+      <h1>Hey, <span id="girlName">Beautiful</span> 🌷</h1>
+
+      <p class="intro">I have something special to tell you...</p>
+
+      <!-- Main photo -->
+      <div class="photo-frame">
+        <img id="girlPhoto" src="images/her1.jpg"
+             alt="A special person">
+
+        <div id="photoFallback" class="photo-fallback">
+          <span>♡</span>
+          <p>Your beautiful photo goes here</p>
+          <small>Add images/her-photo.jpg</small>
+        </div>
+      </div>
+
+      <p class="message" id="personalMessage">
+        Every time I talk to you, my day gets a little brighter.
+        You have a special place in my heart. ❤️
+      </p>
+
+      <div class="question-card">
+        <div class="tiny-heart">💗</div>
+
+        <h2>Will you be my girlfriend?</h2>
+
+        <p class="subtitle">
+          I wanted to ask you from the bottom of my heart.
+        </p>
+
+        <div class="button-area" id="buttonArea">
+          <button id="yesButton" class="yes-button" type="button">
+            YES! ❤️
+          </button>
+
+          <button id="noButton" class="no-button" type="button">
+            NO 🙈
+          </button>
+        </div>
+
+        <p id="feedback" aria-live="polite">
+          I'm a little nervous asking you this! 🥹
+        </p>
+
+        <button id="declineButton" class="decline-button" type="button">
+          I need time / I'd rather say no
+        </button>
+      </div>
+
+      <p class="signature">
+        Made with ❤️ by <span id="yourName">NOBEL CH</span>
+      </p>
+    </section>
+
+    <!-- Love letter -->
+    <section class="section">
+      <p class="eyebrow">WORDS FROM MY HEART</p>
+
+      <h2>A Little Love Letter 💌</h2>
+
+      <p class="section-intro">
+        There are some things I want you to know.
+      </p>
+
+      <button id="letterButton" class="pink-button" type="button">
+        Open Your Letter 💌
+      </button>
+
+      <article id="letter" class="letter" hidden>
+        <h3>My dearest <span id="letterGirlName">Beautiful</span>,</h3>
+
+        <p id="letterContent">
+          I don't know exactly when it happened, but you slowly became
+          someone who makes my days brighter. Your smile and our little
+          conversations mean more to me than you know.
+
+          I wanted to be honest about my feelings. Whatever your answer,
+          I hope this little surprise makes you smile. ❤️
+        </p>
+
+        <p class="letter-signature">
+          With love, <span id="letterYourName">NOBEL CH</span> 🌹
+        </p>
+      </article>
+    </section>
+
+    <!-- Photo gallery -->
+    <section class="section gallery-section">
+      <p class="eyebrow">SPECIAL MEMORIES</p>
+
+      <h2>Our Little Gallery 📸</h2>
+
+      <p class="section-intro">
+        Some lovely pictures to make you smile.
+      </p>
+
+      <div id="gallery" class="gallery">
+        <button class="photo-card" data-index="0" type="button"
+                aria-label="View photo 1">
+          <img src="images/her.jpg" alt="Memory one">
+          <span>Beautiful you 💗</span>
+        </button>
+
+        <button class="photo-card" data-index="1" type="button"
+                aria-label="View photo 2">
+          <img src="images/her1.jpg" alt="Memory two">
+          <span>A lovely moment 🌷</span>
+        </button>
+
+        <button class="photo-card" data-index="2" type="button"
+                aria-label="View photo 3">
+          <img src="images/her3.jpg" alt="Memory three">
+          <span>A little happiness ✨</span>
+        </button>
+
+        <button class="photo-card" data-index="3" type="button"
+                aria-label="View photo 4">
+          <img src="images/her4.jpg" alt="Memory four">
+          <span>Sweet memories 💕</span>
+        </button>
+
+        <button class="photo-card" data-index="4" type="button"
+                aria-label="View photo 5">
+          <img src="images/her5.jpg" alt="Memory five">
+          <span>Just you and a smile ❤️</span>
+        </button>
+      </div>
+
+      <div class="gallery-controls">
+        <button id="previousPhoto" class="small-button" type="button">
+          ← Previous
+        </button>
+
+        <span id="photoCounter">1 / 5</span>
+
+        <button id="nextPhoto" class="small-button" type="button">
+          Next →
+        </button>
+      </div>
+    </section>
+
+    <!-- Surprise heart -->
+    <section class="section surprise-section">
+      <p class="eyebrow">ONE LAST LITTLE SECRET</p>
+
+      <h2>Tap the heart 💗</h2>
+
+      <button id="surpriseButton" class="surprise-heart" type="button"
+              aria-label="Reveal a secret">
+        ♡
+      </button>
+
+      <p id="surpriseMessage" hidden>
+        If I could choose one little thing to make my day better,
+        it would be another conversation with you. ❤️
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Whatever your answer, thank you for being you. ♡
+  </footer>
+
+  <!-- Yes celebration popup -->
+  <div id="celebration" class="overlay" hidden>
+    <div class="popup">
+      <div class="celebration-emoji">💖🌹💖</div>
+
+      <h2 id="celebrationTitle">YOU SAID YES! 🥹</h2>
+
+      <p id="celebrationMessage">
+        You just made me the happiest person in the world! ❤️
+      </p>
+
+      <p>Here's to our beautiful story together. 🌷</p>
+
+      <button id="replayButton" class="pink-button" type="button">
+        Celebrate Again ✨
+      </button>
+
+      <button id="closeCelebration" class="plain-button" type="button">
+        Back to the page
+      </button>
+    </div>
+
+    <div id="confetti" aria-hidden="true"></div>
+  </div>
+
+  <!-- Response popup -->
+  <div id="responseDialog" class="overlay" hidden>
+    <div class="popup">
+      <div class="celebration-emoji">💌</div>
+
+      <h2>Thank you for telling me.</h2>
+
+      <p>
+        I respect your feelings. You don't have to say yes,
+        and you can take your time. ❤️
+      </p>
+
+      <button id="closeResponse" class="pink-button" type="button">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Enlarged photo viewer -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button id="closeLightbox" class="lightbox-close" type="button"
+            aria-label="Close photo">×</button>
+
+    <button id="lightboxPrev" class="lightbox-arrow" type="button"
+            aria-label="Previous photo">‹</button>
+
+    <img id="lightboxImage" src="" alt="Enlarged photo">
+
+    <button id="lightboxNext" class="lightbox-arrow" type="button"
+            aria-label="Next photo">›</button>
+  </div>
+</body>
+</html>
